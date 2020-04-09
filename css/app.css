@@ -1,0 +1,202 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    font-family: 'Chewy', cursive;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-weight: 300;
+}
+
+/*
+ * win Message styles
+ */
+
+.win-message {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    text-align: center;
+    padding: 50px 0;
+}
+
+.win-message.active {
+    display: block;
+}
+
+.win-message h1 {
+    font-size: 80px;
+    color: #02ccba;
+    animation: 1s 3 rubberBand;
+}
+
+.win-message p {
+    margin-top: 150px;
+    margin-bottom: 50px;
+    font-size: 36px;
+}
+
+.win-message .restart-game {
+    display: block;
+    margin: 50px auto;
+    background: #02ccba;
+    color: #fff;
+    font-size: 22px;
+    padding: 15px 0;
+    text-align: center;
+    border: none;
+    font-family: 'Chewy', cursive;
+    min-width: 300px;
+    border: 1px solid transparent;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.win-message .restart-game:hover {
+    background: #fff;
+    color: #02ccba;
+    border-color: #02ccba;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 660px;
+    min-height: 680px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 11px 9px 15px 0 rgba(0,0,0,0.2);
+    transition: all .4s;
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    background: #02b3e4;
+    cursor: default;
+}
+
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    pointer-events: none;
+    cursor: default;
+    background: #02ccba;
+    font-size: 33px;
+    animation: 0.8s 0.6s 1 rubberBand;
+}
+
+.deck .card.shake {
+    background: #E8554E;
+    animation-duration: 0.5s;
+}
+
+.deck .card.disable {
+    pointer-events: none;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    text-align: left;
+    width: 345px;
+    margin-bottom: 10px;
+    cursor: default;
+}
+
+.stars {
+    margin: 0 5px 0 0;
+}
+ .stars li {
+    list-style: none;
+    display: inline-block;
+    opacity: 0.5;
+    transition: all 0.5s;
+
+}
+
+.stars li.active {
+    color: #ffdf00;
+    opacity: 1;
+}
+
+.moves {
+    padding-left: 20px;
+}
+
+.timer {
+    display: inline-block;
+    list-style: none;
+    padding-left: 50px;
+    margin: 0;
+}
+
+.timer li {
+    display: inline-block;
+}
+
+
+.restart {
+    float: right;
+    cursor: pointer;
+}
