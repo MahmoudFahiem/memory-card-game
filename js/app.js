@@ -329,7 +329,7 @@ const createDeck = () => {
 
     // Shuffling the icons array
 
-    //shuffle(deckIcons);
+    shuffle(deckIcons);
 
     deckUl.addEventListener('click', cardClickListener);
 
