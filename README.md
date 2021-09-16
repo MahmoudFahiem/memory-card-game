@@ -1,6 +1,6 @@
 # Memory Game Project
 
-An awesome memory card game that enhance your memory. It has a lot of fantastic animations.
+An awesome memory card game that enhance your memory. It has a lot of fantastic animations. You can view the game from here https://mahmoudfahiem.github.io/memory-card-game/
 
 ## Table of Contents
 
